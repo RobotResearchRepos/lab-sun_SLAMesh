@@ -6,6 +6,12 @@ RUN apt-get update \
  && apt-get install -y git \
  && rm -rf /var/lib/apt/lists/*
 
+# apt packages
+
+RUN apt-get update \
+ && apt-get install -y libceres-dev \
+ && rm -rf /var/lib/apt/lists/*
+
 # Code repository
 
 RUN mkdir -p /catkin_ws/src/
